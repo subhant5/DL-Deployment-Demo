@@ -1,5 +1,6 @@
 services:
   image-classifier:
+    image: subhant5/dl-deployment-demo:latest
     build:
       context: .
       dockerfile: Dockerfile
