@@ -94,7 +94,7 @@ async def predict_image(file: UploadFile = File(...)) -> List[str]:
         )[0]
         
         # Extract class names
-        results = [f"{label} ({prob:.2f})" for (number, label, prob) in decoded_predictions]
+        results = [f"label name: {label} confidence:({prob:.2f})" for (number, label, prob) in decoded_predictions]
         
         logger.info(f"Prediction results: {results}")
         return results
